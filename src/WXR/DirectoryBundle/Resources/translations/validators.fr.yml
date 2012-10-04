@@ -1,0 +1,11 @@
+wxr_directory:
+    contact:
+        name:
+            blank: Veuillez entrer un nom
+        email:
+            invalid: Cette adresse e-mail est invalide
+        website:
+            invalid: Cet URL est invalide
+    group:
+        name:
+            blank: Veuillez entrer un nom

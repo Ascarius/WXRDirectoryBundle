@@ -1,0 +1,32 @@
+{
+    "name": "wxr/directory-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony WXRDirectoryBundle",
+    "keywords": [ "directory", "contact" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lionel Gaillard",
+            "email": "lionel.gaillard@wxrstudios.com",
+            "homepage": "http://wxrstudios.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "2.1.*",
+        "wxr/common-bundle": "dev-master",
+        "wxr/category-bundle": "dev-master",
+        "wxr/geo-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "WXR\\DirectoryBundle": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
+}

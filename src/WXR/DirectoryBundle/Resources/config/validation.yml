@@ -1,0 +1,13 @@
+WXR\DirectoryBundle\Entity\Contact:
+    proterties:
+        name:
+            - NotBlank: { message: wxr_directory.contact.name.blank }
+        email:
+            - Email: { message: wxr_directory.contact.email.invalid }
+        website:
+            - Url: { message: wxr_directory.contact.website.invalid }
+
+WXR\DirectoryBundle\Entity\Group:
+    proterties:
+        name:
+            - NotBlank: { message: wxr_directory.group.name.blank }

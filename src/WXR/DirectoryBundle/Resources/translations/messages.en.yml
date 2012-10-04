@@ -1,0 +1,38 @@
+wxr_directory:
+    contact:
+        contact: Contact
+        contacts: Contacts
+        enabled: Enabled
+        name: Name
+        description: Description
+        phone: Phone
+        mobile: Mobile
+        email: E-mail
+        website: Website
+        list: Contacts list
+        add: Add a contact
+        edit: Edit contact
+        save: Save contact
+        reset: Reset
+        delete: Delete contact
+        added: Contact added
+        updated: Contact updated
+        deleted: Contact deleted
+        not_found: This contact doesn't exist
+        none: No contact
+    group:
+        group: Group
+        groups: Groups
+        name: Name
+        description: Description
+        list: Groups list
+        add: Add a group
+        edit: Edit group
+        save: Save group
+        reset: Reset
+        delete: Delete group
+        added: Group added
+        updated: Group updated
+        deleted: Group deleted
+        not_found: This group doesn't exist
+        none: No group

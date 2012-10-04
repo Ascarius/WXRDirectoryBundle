@@ -1,0 +1,9 @@
+WXR\DirectoryBundle\Entity\Contact:
+    type: entity
+    table: wxr_directory_contact
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO

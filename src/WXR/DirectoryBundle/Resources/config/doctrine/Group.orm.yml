@@ -1,0 +1,9 @@
+WXR\DirectoryBundle\Entity\Group:
+    type: entity
+    table: wxr_directory_group
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO

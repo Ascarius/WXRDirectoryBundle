@@ -1,0 +1,29 @@
+WXR\DirectoryBundle\Entity\BaseContact:
+    type: mappedSuperClass
+    fields:
+        enabled:
+            type: boolean
+        name:
+            length: 50
+        description:
+            type: text
+            nullable: true
+        phone:
+            length: 20
+            nullable: true
+        mobile:
+            length: 20
+            nullable: true
+        email:
+            length: 50
+            nullable: true
+        website:
+            length: 255
+            nullable: true
+    manyToOne:
+        location:
+            targetEntity: WXR\GeoBundle\Entity\Location
+            joinColumn:
+                name: location_id
+                referencedColumnName: id
+                onDelete: SET NULL

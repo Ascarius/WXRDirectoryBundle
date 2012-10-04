@@ -1,0 +1,48 @@
+parameters:
+
+    wxr_directory.contact.class: WXR\DirectoryBundle\Entity\Contact
+    wxr_directory.group.class: WXR\DirectoryBundle\Entity\Group
+
+services:
+
+    # Contact
+
+    wxr_directory.contact.manager:
+        class: WXR\DirectoryBundle\Entity\ContactManager
+        arguments: [@doctrine.orm.entity_manager, %wxr_directory.contact.class%]
+
+    wxr_directory.contact.form:
+        factory_service: form.factory
+        factory_method: create
+        class: Symfony\Component\Form\Form
+        arguments: [ @wxr_directory.contact.form.type ]
+
+    wxr_directory.contact.form.type:
+        class: WXR\DirectoryBundle\Form\Type\ContactType
+        arguments: [ %wxr_directory.contact.class%, @wxr_geo.location.form.type ]
+
+    wxr_directory.contact.form.handler:
+        class: WXR\DirectoryBundle\Form\Handler\ContactHandler
+        scope: request
+        arguments: [ @request, @wxr_directory.contact.form, @wxr_directory.contact.manager ]
+
+    # Group
+
+    wxr_directory.group.manager:
+        class: WXR\DirectoryBundle\Entity\GroupManager
+        arguments: [@doctrine.orm.entity_manager, %wxr_directory.group.class%]
+
+    wxr_directory.group.form:
+        factory_service: form.factory
+        factory_method: create
+        class: Symfony\Component\Form\Form
+        arguments: [ @wxr_directory.group.form.type ]
+
+    wxr_directory.group.form.type:
+        class: WXR\DirectoryBundle\Form\Type\GroupType
+        arguments: [ %wxr_directory.group.class% ]
+
+    wxr_directory.group.form.handler:
+        class: WXR\DirectoryBundle\Form\Handler\GroupHandler
+        scope: request
+        arguments: [ @request, @wxr_directory.group.form, @wxr_directory.group.manager ]
