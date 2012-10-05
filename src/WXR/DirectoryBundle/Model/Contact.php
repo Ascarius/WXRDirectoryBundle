@@ -123,4 +123,12 @@ abstract class Contact implements ContactInterface
     {
         return $this->website;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

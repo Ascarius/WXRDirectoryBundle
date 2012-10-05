@@ -1,0 +1,18 @@
+{% extends "WXRDirectoryBundle::admin_layout.html.twig" %}
+
+{% block content %}
+
+<h3>{{ 'wxr_directory.contact.delete_confirm'|trans }}</h3>
+
+<ul>
+    <li>{{ contact }}</li>
+</ul>
+
+<div class="form">
+    <div class="form-actions">
+        <a href="{{ path('wxr_directory_contact_admin_delete', { id: contact.getId(), confirm:true }) }}" class="btn btn-danger"><i class="icon-trash icon-white"></i> {{ 'Yes'|trans }}</a>
+        <a href="{{ path('wxr_directory_contact_admin_list') }}" class="btn"><i class="icon-trash"></i> {{ 'No'|trans }}</a>
+    </div>
+</div>
+
+{% endblock %}

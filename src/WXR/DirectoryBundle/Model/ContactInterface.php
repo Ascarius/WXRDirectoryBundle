@@ -39,4 +39,9 @@ interface ContactInterface
     public function setWebsite($website);
 
     public function getWebsite();
+
+    /**
+     * @return string
+     */
+    public function __toString();
 }
