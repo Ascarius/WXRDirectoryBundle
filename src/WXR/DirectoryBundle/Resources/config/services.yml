@@ -30,7 +30,7 @@ services:
         class: WXR\DirectoryBundle\Admin\Entity\ContactAdmin
         arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: wxr_directory.directory, label: wxr_directory.contact.contact, label_catalogue="messages" }
+            - { name: sonata.admin, manager_type: orm, group: wxr_directory.directory, label: wxr_directory.contact.contact }
 
     # Group
 
