@@ -1,6 +1,6 @@
 <?php
 
-namespace WXR\ContactBundle\Form\Handler;
+namespace WXR\DirectoryBundle\Form\Handler;
 
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
