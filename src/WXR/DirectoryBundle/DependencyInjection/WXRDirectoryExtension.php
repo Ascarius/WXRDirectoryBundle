@@ -1,6 +1,6 @@
 <?php
 
-namespace Westudio\ORLBundle\DependencyInjection;
+namespace WXR\DirectoryBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
