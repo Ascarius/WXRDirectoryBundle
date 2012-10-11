@@ -1,4 +1,5 @@
 wxr_directory:
+    directory: Directory
     contact:
         contact: Contact
         contacts: Contacts
