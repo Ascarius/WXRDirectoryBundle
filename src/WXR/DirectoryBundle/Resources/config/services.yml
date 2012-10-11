@@ -26,6 +26,12 @@ services:
         scope: request
         arguments: [ @request, @wxr_directory.contact.form, @wxr_directory.contact.manager ]
 
+    wxr_directory.admin.contact:
+        class: WXR\DirectoryBundle\Admin\Entity\ContactAdmin
+        arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: wxr_directory.directory, label: wxr_directory.contact.contact }
+
     # Group
 
     wxr_directory.group.manager:
@@ -46,3 +52,9 @@ services:
         class: WXR\DirectoryBundle\Form\Handler\GroupHandler
         scope: request
         arguments: [ @request, @wxr_directory.group.form, @wxr_directory.group.manager ]
+
+    wxr_directory.admin.group:
+        class: WXR\DirectoryBundle\Admin\Entity\GroupAdmin
+        arguments: [ ~, WXR\DirectoryBundle\Entity\Group, SonataAdminBundle:CRUD ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: wxr_directory, label: wxr_directory.group.group }
