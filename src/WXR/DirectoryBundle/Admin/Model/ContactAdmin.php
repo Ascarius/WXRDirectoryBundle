@@ -37,6 +37,11 @@ class ContactAdmin extends Admin
                 'required' => false,
                 'label' => 'wxr_directory.contact.website'
             ))
+            ->add('groups', 'entity', array(
+                'label' => 'wxr_directory.group.groups',
+                'multiple' => true,
+                'expanded' => true
+            ))
         ;
     }
 

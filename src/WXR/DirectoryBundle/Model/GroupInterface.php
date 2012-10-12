@@ -11,4 +11,24 @@ use WXR\CategoryBundle\Model\CategoryInterface;
  */
 interface GroupInterface extends CategoryInterface
 {
+    /**
+     * Add contact
+     *
+     * @param ContactInterface $contact
+     * @return GroupInterface
+     */
+    public function addContact(ContactInterface $contact);
+
+    /**
+     * Remove contact
+     *
+     * @param ContactInterface $contact
+     * @return GroupInterface
+     */
+    public function removeContact(ContactInterface $contact);
+
+    /**
+     * @return ContactInterface[]
+     */
+    public function getContacts();
 }

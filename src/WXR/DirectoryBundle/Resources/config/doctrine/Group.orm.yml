@@ -6,3 +6,7 @@ WXR\DirectoryBundle\Entity\Group:
             type: integer
             generator:
                 strategy: AUTO
+    manyToMany:
+        contacts:
+            targetEntity: WXR\DirectoryBundle\Entity\Contact
+            mappedBy: groups

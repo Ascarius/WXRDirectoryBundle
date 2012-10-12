@@ -14,6 +14,52 @@ interface ContactInterface
     public function getId();
 
     /**
+     * Set group
+     *
+     * @param GroupInterface[] $groups
+     * @return ContactInterface
+     */
+    public function setGroups($groups);
+
+    /**
+     * Add group
+     *
+     * @param GroupInterface $group
+     * @return ContactInterface
+     */
+    public function addGroup(GroupInterface $group);
+
+    /**
+     * Remove group
+     *
+     * @param GroupInterface $group
+     * @return ContactInterface
+     */
+    public function removeGroup(GroupInterface $group);
+
+    /**
+     * Clear groups
+     *
+     * @return ContactInterface
+     */
+    public function clearGroups();
+
+    /**
+     * Get group
+     *
+     * @return GroupInterface[]
+     */
+    public function getGroups();
+
+    /**
+     * Has group
+     *
+     * @param GroupInterface $group
+     * @return boolean
+     */
+    public function hasGroup(GroupInterface $group);
+
+    /**
      * Set enabled
      *
      * @param boolean $enabled

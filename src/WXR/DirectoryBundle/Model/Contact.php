@@ -12,6 +12,11 @@ abstract class Contact implements ContactInterface
     protected $id;
 
     /**
+     * @var GroupInterface[]
+     */
+    protected $groups;
+
+    /**
      * @var boolean
      */
     protected $enabled;
@@ -52,12 +57,88 @@ abstract class Contact implements ContactInterface
     protected $website;
 
 
+    public function __construct()
+    {
+        $this->groups = array();
+    }
+
     /**
      * {@inheritDoc}
      */
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setGroups($groups)
+    {
+        $this->clearGroups();
+
+        foreach ($groups as $group) {
+            $this->addGroup($group);
+        }
+
+        return $this;
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addGroup(GroupInterface $group)
+    {
+        if (! $this->hasGroup($group)) {
+            $group->addContact($this);
+            $this->groups[] = $group;
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeGroup(GroupInterface $group)
+    {
+        if (false !== ($key = array_search($group, $this->groups, true))) {
+            $group->removeContact($this);
+            unset($this->groups[$key]);
+        }
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function clearGroups()
+    {
+        foreach ($this->contacts as $contact) {
+            $contact->removeContact($this);
+        }
+
+        $this->contacts = array();
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function hasGroup(GroupInterface $group)
+    {
+        return false !== array_search($group, $this->groups, true);
     }
 
     /**

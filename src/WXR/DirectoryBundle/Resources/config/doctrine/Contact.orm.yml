@@ -6,3 +6,15 @@ WXR\DirectoryBundle\Entity\Contact:
             type: integer
             generator:
                 strategy: AUTO
+    manyToMany:
+        groups:
+            targetEntity: WXR\DirectoryBundle\Entity\Group
+            inversedBy: contacts
+            joinTable:
+                name: wxr_directory_contact_group
+                joinColumns:
+                    contact_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    group_id:
+                        referencedColumnName: id

@@ -29,3 +29,10 @@ WXR\DirectoryBundle\Entity\BaseContact:
                 name: location_id
                 referencedColumnName: id
                 onDelete: SET NULL
+#    manyToOne:
+#        group:
+#            targetEntity: WXR\GeoBundle\Entity\Group
+#            joinColumn:
+#                name: group_id
+#                referencedColumnName: id
+#                onDelete: SET NULL
