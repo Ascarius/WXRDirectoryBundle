@@ -39,6 +39,7 @@ class ContactAdmin extends Admin
             ))
             ->add('groups', 'entity', array(
                 'label' => 'wxr_directory.group.groups',
+                'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
                 'multiple' => true,
                 'expanded' => true
             ))
