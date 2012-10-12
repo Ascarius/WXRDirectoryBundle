@@ -1,5 +1,5 @@
 WXR\DirectoryBundle\Entity\BaseContact:
-    type: mappedSuperClass
+    type: mappedSuperclass
     fields:
         enabled:
             type: boolean
@@ -20,7 +20,7 @@ WXR\DirectoryBundle\Entity\BaseContact:
         website:
             length: 255
             nullable: true
-    manyToOne:
+    oneToOne:
         location:
             targetEntity: WXR\GeoBundle\Entity\Location
             joinColumn:
