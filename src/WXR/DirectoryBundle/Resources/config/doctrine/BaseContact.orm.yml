@@ -23,6 +23,8 @@ WXR\DirectoryBundle\Entity\BaseContact:
     oneToOne:
         location:
             targetEntity: WXR\GeoBundle\Entity\Location
+            fetch: EAGER
+            cascade: [ all ]
             joinColumn:
                 name: location_id
                 referencedColumnName: id
