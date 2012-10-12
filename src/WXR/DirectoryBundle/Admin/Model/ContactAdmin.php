@@ -41,7 +41,8 @@ class ContactAdmin extends Admin
                 'label' => 'wxr_directory.group.groups',
                 'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
                 'multiple' => true,
-                'expanded' => true
+                'expanded' => true,
+                'required' => false
             ))
         ;
     }
