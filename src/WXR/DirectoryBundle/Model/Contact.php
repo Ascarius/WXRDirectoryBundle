@@ -59,6 +59,7 @@ abstract class Contact implements ContactInterface
 
     public function __construct()
     {
+        $this->enabled = true;
         $this->groups = array();
     }
 
