@@ -20,7 +20,7 @@ class ContactAdmin extends Admin
                 'required' => false,
                 'label' => 'wxr_directory.contact.description'
             ))
-            ->add('location', 'sonata_type_model', array(), array('edit' => 'inline'))
+            ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
                 'required' => false,
                 'label' => 'wxr_directory.contact.phone'
