@@ -2,6 +2,8 @@
 
 namespace WXR\DirectoryBundle\Model;
 
+use WXR\GeoBundle\Model\LocationInterface;
+
 abstract class Contact implements ContactInterface
 {
     protected $id;
