@@ -1,9 +1,12 @@
 WXR\DirectoryBundle\Entity\Group:
     type: entity
     table: wxr_directory_group
-    fields:
+    id:
         id:
             type: integer
-            id: true
             generator:
                 strategy: AUTO
+    fields:
+        slug:
+            gedmo:
+                slug: { fields: [ name ] }
