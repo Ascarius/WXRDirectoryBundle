@@ -2,6 +2,9 @@
 
 namespace WXR\DirectoryBundle\Entity;
 
-class Group extends BaseGroup
+use WXR\CategoryBundle\Entity\Category;
+use WXR\CategoryBundle\Model\GroupInterface;
+
+class Group extends Category implements GroupInterface
 {
 }
