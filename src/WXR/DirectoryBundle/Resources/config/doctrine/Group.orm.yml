@@ -1,11 +1,6 @@
 WXR\DirectoryBundle\Entity\Group:
     type: entity
     table: wxr_directory_group
-    id:
-        id:
-            type: integer
-            generator:
-                strategy: AUTO
     manyToMany:
         contacts:
             targetEntity: WXR\DirectoryBundle\Entity\Contact
