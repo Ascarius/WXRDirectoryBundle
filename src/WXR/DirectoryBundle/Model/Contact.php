@@ -25,6 +25,11 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
+    protected $slug;
+
+    /**
+     * @var string
+     */
     protected $civility;
 
     /**
