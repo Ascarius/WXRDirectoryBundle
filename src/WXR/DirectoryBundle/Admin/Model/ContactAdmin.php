@@ -21,7 +21,7 @@ class ContactAdmin extends Admin
                 'choices' => Civility::getList()
             ))
             ->add('firstname', null, array(
-                'label' => 'wxr_directory.contact.firstname'
+                'label' => 'wxr_directory.contact.firstname',
                 'required' => false,
             ))
             ->add('lastname', null, array(
