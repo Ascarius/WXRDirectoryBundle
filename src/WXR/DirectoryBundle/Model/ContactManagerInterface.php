@@ -6,4 +6,11 @@ use WXR\CommonBundle\Model\BaseManagerInterface;
 
 interface ContactManagerInterface extends BaseManagerInterface
 {
+    /**
+     * Find one by slug
+     *
+     * @param string
+     * @return ContactInterface|null
+     */
+    public function findOneBySlug($slug);
 }
