@@ -2,6 +2,8 @@
 
 namespace WXR\DirectoryBundle\Entity;
 
+use Doctrine\ORM\QueryBuilder;
+
 use WXR\CommonBundle\Entity\BaseManager;
 use WXR\DirectoryBundle\Model\ContactManagerInterface;
 
