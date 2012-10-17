@@ -356,6 +356,7 @@ abstract class Contact implements ContactInterface
      */
     public function __toString()
     {
-        return $this->getName();
+        return ($this->getFirstname() ? $this->getFirstname() . ' ' : '')
+             . $this->getLastname();
     }
 }
