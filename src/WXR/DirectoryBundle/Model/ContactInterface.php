@@ -180,6 +180,21 @@ interface ContactInterface
     public function getPhone();
 
     /**
+     * Set fax
+     *
+     * @param string $fax
+     * @return ContactInterface
+     */
+    public function setFax($fax);
+
+    /**
+     * Get fax
+     *
+     * @return string
+     */
+    public function getFax();
+
+    /**
      * Set mobile
      *
      * @param string $mobile

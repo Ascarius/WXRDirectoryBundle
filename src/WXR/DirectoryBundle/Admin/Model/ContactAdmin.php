@@ -61,14 +61,17 @@ class ContactAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
+            ->add('firstname')
+            ->add('lastname')
+            ->add('description')
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
+            ->addIdentifier('firstname')
+            ->addIdentifier('lastname')
         ;
     }
 

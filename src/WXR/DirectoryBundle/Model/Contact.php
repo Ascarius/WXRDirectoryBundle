@@ -60,6 +60,11 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
+    protected $fax;
+
+    /**
+     * @var string
+     */
     protected $mobile;
 
     /**
@@ -300,6 +305,24 @@ abstract class Contact implements ContactInterface
     public function getPhone()
     {
         return $this->phone;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFax($fax)
+    {
+        $this->fax = $fax;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFax()
+    {
+        return $this->fax;
     }
 
     /**

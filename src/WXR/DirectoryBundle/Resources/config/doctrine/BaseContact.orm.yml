@@ -26,6 +26,9 @@ WXR\DirectoryBundle\Entity\BaseContact:
         phone:
             length: 20
             nullable: true
+        fax:
+            length: 20
+            nullable: true
         mobile:
             length: 20
             nullable: true
