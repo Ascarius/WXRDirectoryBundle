@@ -5,3 +5,4 @@ WXR\DirectoryBundle\Entity\Group:
         contacts:
             targetEntity: WXR\DirectoryBundle\Entity\Contact
             mappedBy: groups
+            orderBy: { lastname: ASC }

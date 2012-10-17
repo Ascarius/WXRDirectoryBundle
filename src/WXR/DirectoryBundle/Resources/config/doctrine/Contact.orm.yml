@@ -5,6 +5,7 @@ WXR\DirectoryBundle\Entity\Contact:
         groups:
             targetEntity: WXR\DirectoryBundle\Entity\Group
             inversedBy: contacts
+            orderBy: { name: ASC }
             joinTable:
                 name: wxr_directory_contact_group
                 joinColumns:
