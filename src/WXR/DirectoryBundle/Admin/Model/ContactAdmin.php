@@ -33,8 +33,7 @@ class ContactAdmin extends Admin
             ))
             ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
-                'required' => false,
-                'label' => 'wxr_directory.contact.phone'
+                'required' => false
             ))
             ->add('mobile', null, array(
                 'required' => false,
