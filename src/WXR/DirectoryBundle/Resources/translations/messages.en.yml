@@ -1,10 +1,18 @@
 wxr_directory:
     directory: Directory
+    civility:
+        misstress: Mrs
+        mister: Mr
+        doctor: Dr
+        professor: Prof
+        master: Master
     contact:
         contact: Contact
         contacts: Contacts
         enabled: Enabled
-        name: Name
+        civility: Civility
+        firstname: Firstname
+        lastname: Lastname
         description: Description
         phone: Phone
         mobile: Mobile

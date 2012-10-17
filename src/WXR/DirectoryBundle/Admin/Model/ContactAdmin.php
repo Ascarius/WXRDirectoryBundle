@@ -8,13 +8,24 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 
+use WXR\DirectoryBundle\Enum\Civility;
+
 class ContactAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array(
-                'label' => 'wxr_directory.contact.name'
+            ->add('civility', 'sonata_type_translatable_choice', array(
+                'required' => false,
+                'label' => 'wxr_directory.contact.civility',
+                'choices' => Civility::getList()
+            ))
+            ->add('firstname', null, array(
+                'label' => 'wxr_directory.contact.firstname'
+                'required' => false,
+            ))
+            ->add('lastname', null, array(
+                'label' => 'wxr_directory.contact.lastname'
             ))
             ->add('description', null, array(
                 'required' => false,

@@ -1,7 +1,7 @@
 wxr_directory:
     contact:
-        name:
-            blank: Veuillez entrer un nom
+        firstname:
+            blank: Veuillez entrer un prénom
         email:
             invalid: Cette adresse e-mail est invalide
         website:

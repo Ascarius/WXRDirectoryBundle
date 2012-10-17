@@ -2,6 +2,7 @@
 
 namespace WXR\DirectoryBundle\Model;
 
+use WXR\DirectoryBundle\Enum\Civility;
 use WXR\GeoBundle\Model\LocationInterface;
 
 abstract class Contact implements ContactInterface
@@ -24,7 +25,17 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
-    protected $name;
+    protected $civility;
+
+    /**
+     * @var string
+     */
+    protected $firstname;
+
+    /**
+     * @var string
+     */
+    protected $lastname;
 
     /**
      * @var string
@@ -163,9 +174,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function setName($name)
+    public function setSlug($slug)
     {
-        $this->name = $name;
+        $this->slug = $slug;
 
         return $this;
     }
@@ -173,9 +184,63 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function getName()
+    public function getSlug()
     {
-        return $this->name;
+        return $this->slug;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCivility($civility)
+    {
+        $this->civility = $civility;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCivility()
+    {
+        return $this->civility;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
     }
 
     /**

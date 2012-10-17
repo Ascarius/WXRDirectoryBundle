@@ -75,19 +75,64 @@ interface ContactInterface
     public function getEnabled();
 
     /**
-     * Set name
+     * Set slug
      *
-     * @param string $name
+     * @param string $slug
      * @return ContactInterface
      */
-    public function setName($name);
+    public function setSlug($slug);
 
     /**
-     * Get name
+     * Get slug
      *
      * @return string
      */
-    public function getName();
+    public function getSlug();
+
+    /**
+     * Set civility
+     *
+     * @param string $civility
+     * @return ContactInterface
+     */
+    public function setCivility($civility);
+
+    /**
+     * Get civility
+     *
+     * @return string
+     */
+    public function getCivility();
+
+    /**
+     * Set firstname
+     *
+     * @param string $firstname
+     * @return ContactInterface
+     */
+    public function setFirstname($firstname);
+
+    /**
+     * Get firstname
+     *
+     * @return string
+     */
+    public function getFirstname();
+
+    /**
+     * Set lastname
+     *
+     * @param string $lastname
+     * @return ContactInterface
+     */
+    public function setLastname($lastname);
+
+    /**
+     * Get lastname
+     *
+     * @return string
+     */
+    public function getLastname();
 
     /**
      * Set description
