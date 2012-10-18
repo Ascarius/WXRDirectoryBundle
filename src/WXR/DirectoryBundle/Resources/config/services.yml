@@ -30,7 +30,13 @@ services:
         class: WXR\DirectoryBundle\Admin\Entity\ContactAdmin
         arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: wxr_directory.directory, label: wxr_directory.contact.contacts, label_catalogue: messages }
+            -
+                name: sonata.admin
+                manager_type: orm
+                group: directory.directory
+                label: contact.contacts
+                label_catalogue: WXRDirectoryBundle
+                label_translator_strategy: sonata.admin.label.strategy.noop
 
     # Group
 
@@ -57,4 +63,10 @@ services:
         class: WXR\DirectoryBundle\Admin\Entity\GroupAdmin
         arguments: [ ~, WXR\DirectoryBundle\Entity\Group, SonataAdminBundle:CRUD ]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: wxr_directory.directory, label: wxr_directory.group.groups, label_catalogue: messages }
+            -
+                name: sonata.admin
+                manager_type: orm
+                group: directory.directory
+                label: group.groups
+                label_catalogue: WXRDirectoryBundle
+                label_translator_strategy: sonata.admin.label.strategy.noop
