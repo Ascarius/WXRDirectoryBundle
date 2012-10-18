@@ -65,13 +65,13 @@ class ContactAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('firstname', array(
+            ->add('firstname', null, array(
                 'label' => 'wxr_directory.contact.firstname'
             ))
-            ->add('lastname', array(
+            ->add('lastname', null, array(
                 'label' => 'wxr_directory.contact.lastname'
             ))
-            ->add('description', array(
+            ->add('description', null, array(
                 'label' => 'wxr_directory.contact.description'
             ))
         ;
@@ -80,10 +80,10 @@ class ContactAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('firstname', array(
+            ->addIdentifier('firstname', null, array(
                 'label' => 'wxr_directory.contact.firstname'
             ))
-            ->addIdentifier('lastname', array(
+            ->addIdentifier('lastname', null, array(
                 'label' => 'wxr_directory.contact.lastname'
             ))
         ;
