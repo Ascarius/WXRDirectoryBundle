@@ -33,7 +33,12 @@ class ContactAdmin extends Admin
             ))
             ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
-                'required' => false
+                'required' => false,
+                'label' => 'wxr_directory.contact.phone'
+            ))
+            ->add('fax', null, array(
+                'required' => false,
+                'label' => 'wxr_directory.contact.fax'
             ))
             ->add('mobile', null, array(
                 'required' => false,
@@ -60,17 +65,27 @@ class ContactAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('firstname')
-            ->add('lastname')
-            ->add('description')
+            ->add('firstname', array(
+                'label' => 'wxr_directory.contact.firstname'
+            ))
+            ->add('lastname', array(
+                'label' => 'wxr_directory.contact.lastname'
+            ))
+            ->add('description', array(
+                'label' => 'wxr_directory.contact.description'
+            ))
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('firstname')
-            ->addIdentifier('lastname')
+            ->addIdentifier('firstname', array(
+                'label' => 'wxr_directory.contact.firstname'
+            ))
+            ->addIdentifier('lastname', array(
+                'label' => 'wxr_directory.contact.lastname'
+            ))
         ;
     }
 
