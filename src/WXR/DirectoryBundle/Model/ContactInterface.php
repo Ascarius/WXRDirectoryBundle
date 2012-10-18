@@ -140,7 +140,7 @@ interface ContactInterface
      * @param string $description
      * @return ContactInterface
      */
-    public function setDecription($description);
+    public function setDescription($description);
 
     /**
      * Get description

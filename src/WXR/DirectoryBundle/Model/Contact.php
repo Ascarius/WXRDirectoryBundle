@@ -256,7 +256,7 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function setDecription($description)
+    public function setDescription($description)
     {
         $this->description = $description;
 
