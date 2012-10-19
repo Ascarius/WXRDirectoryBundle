@@ -17,7 +17,8 @@ class ContactAdmin extends Admin
         $formMapper
             ->add('civility', 'sonata_type_translatable_choice', array(
                 'required' => false,
-                'choices' => Civility::getList()
+                'choices' => Civility::getList(),
+                'catalogue' => 'WXRDirectoryBundle'
             ))
             ->add('firstname', null, array(
                 'required' => false

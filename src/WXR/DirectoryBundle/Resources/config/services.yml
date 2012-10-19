@@ -36,8 +36,8 @@ services:
             -
                 name: sonata.admin
                 manager_type: orm
-                group: directory.directory
-                label: contact.contacts
+                group: wxr_directory
+                label: contacts
                 label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.underscore
 
@@ -72,6 +72,6 @@ services:
                 name: sonata.admin
                 manager_type: orm
                 group: directory.directory
-                label: group.groups
+                label: groups
                 label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.underscore
