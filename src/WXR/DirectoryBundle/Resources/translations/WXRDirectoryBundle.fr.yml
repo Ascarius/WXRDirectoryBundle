@@ -30,7 +30,7 @@ list:
     label_lastname: Nom
 
     # Group
-    label_name: Name
+    label_name: Nom
 
 filter:
 
