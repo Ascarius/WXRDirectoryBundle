@@ -32,6 +32,14 @@ list:
     # Group
     label_name: Name
 
+filter:
+
+    label_firstname: Prénom
+    label_lastname: Nom
+    label_description: Description
+
+    label_name: Nom
+
 form:
 
     # Contact
