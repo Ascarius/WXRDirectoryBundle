@@ -4,20 +4,20 @@ namespace WXR\DirectoryBundle\Enum;
 
 class Civility
 {
-    const MISSTRESS = 'misstress';
-    const MISTER    = 'mister';
-    const DOCTOR    = 'doctor';
-    const PROFESSOR = 'professor';
-    const MASTER    = 'master';
+    const MISSTRESS = 'civility.misstress';
+    const MISTER    = 'civility.mister';
+    const DOCTOR    = 'civility.doctor';
+    const PROFESSOR = 'civility.professor';
+    const MASTER    = 'civility.master';
 
     public static function getList()
     {
         return array(
-            static::MISSTRESS => 'civility.misstress',
-            static::MISTER    => 'civility.mister',
-            static::DOCTOR    => 'civility.doctor',
-            static::PROFESSOR => 'civility.professor',
-            static::MASTER    => 'civility.master'
+            static::MISSTRESS => static::MISSTRESS,
+            static::MISTER    => static::MISTER,
+            static::DOCTOR    => static::DOCTOR,
+            static::PROFESSOR => static::PROFESSOR,
+            static::MASTER    => static::MASTER
         );
     }
 }

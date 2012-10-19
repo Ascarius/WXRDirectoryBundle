@@ -39,7 +39,7 @@ services:
                 group: directory.directory
                 label: contact.contacts
                 label_catalogue: %wxr_directory.translation_domain%
-                label_translator_strategy: sonata.admin.label.strategy.noop
+                label_translator_strategy: sonata.admin.label.strategy.underscore
 
     # Group
 
@@ -74,4 +74,4 @@ services:
                 group: directory.directory
                 label: group.groups
                 label_catalogue: %wxr_directory.translation_domain%
-                label_translator_strategy: sonata.admin.label.strategy.noop
+                label_translator_strategy: sonata.admin.label.strategy.underscore

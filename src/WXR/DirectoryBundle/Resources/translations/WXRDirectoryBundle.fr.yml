@@ -1,6 +1,4 @@
-directory:
-    directory: Annuaire
-    directories: Annuaires
+wxr_directory: Annuaire
 
 civility:
     misstress: Mme.
@@ -9,43 +7,44 @@ civility:
     professor: Pr.
     master: Me.
 
-contact:
-    contact: Contact
-    contacts: Contacts
-    enabled: Activé
-    civility: Titre
-    firstname: Prénom
-    lastname: Nom
-    description: Description
-    phone: Téléphone
-    mobile: Mobile
-    email: E-mail
-    website: Site web
-    list: Liste des contacts
-    add: Ajouter un contact
-    edit: Editer le contact
-    save: Enregistrer le contact
-    reset: Réinitialiser
-    delete: Supprimer le contact
-    added: Le contact a été ajouté
-    updated: Le contact a été modifié
-    deleted: Le contact a été supprimé
-    not_found: Ce contact n'existe pas
-    none: Aucun contact
+breadcrumb:
 
-group:
-    group: Groupe
-    groups: Groupes
-    name: Nom
-    description: Description
-    list: Liste des groupes
-    add: Ajouter un groupe
-    edit: Editer le groupe
-    save: Enregistrer le groupe
-    reset: Réinitialiser
-    delete: Supprimer le groupe
-    added: Le groupe a été ajouté
-    updated: Le groupe a été modifié
-    deleted: Le groupe a été supprimé
-    not_found: Ce groupe n'existe pas
-    none: Aucun groupe
+    # Contact
+    link_contact_list: Liste des contacts
+    link_contact_create: Créer un contact
+    link_contact_edit: Editer un contact
+    link_contact_delete: Supprimer un contact
+
+    # Group
+    link_group_list: Liste des groupes
+    link_group_create: Créer un groupe
+    link_group_edit: Editer un groupe
+    link_group_delete: Supprimer groupe
+
+list:
+
+    # Contact
+    label_firstname: Prénom
+    label_lastname: Nom
+
+    # Group
+    label_name: Name
+
+form:
+
+    # Contact
+    label_civility: Titre
+    label_firstname: Prénom
+    label_lastname: Nom
+    label_description: Description
+    label_location: Lieux
+    label_phone: Téléphone
+    label_fax: Fax
+    label_mobile: Mobile
+    label_email: E-mail
+    label_website: Site web
+    label_groups: Groupes
+
+    # Group
+    label_name: Nom
+    # label_description: Description

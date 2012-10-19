@@ -1,6 +1,4 @@
-directory:
-    directory: Directory
-    directories: Directories
+wxr_directory: Directory
 
 civility:
     misstress: Mrs.
@@ -9,43 +7,44 @@ civility:
     professor: Prof.
     master: Master.
 
-contact:
-    contact: Contact
-    contacts: Contacts
-    enabled: Enabled
-    civility: Civility
-    firstname: Firstname
-    lastname: Lastname
-    description: Description
-    phone: Phone
-    mobile: Mobile
-    email: E-mail
-    website: Website
-    list: Contacts list
-    add: Add a contact
-    edit: Edit contact
-    save: Save contact
-    reset: Reset
-    delete: Delete contact
-    added: Contact added
-    updated: Contact updated
-    deleted: Contact deleted
-    not_found: This contact doesn't exist
-    none: No contact
+breadcrumb:
 
-group:
-    group: Group
-    groups: Groups
-    name: Name
-    description: Description
-    list: Groups list
-    add: Add a group
-    edit: Edit group
-    save: Save group
-    reset: Reset
-    delete: Delete group
-    added: Group added
-    updated: Group updated
-    deleted: Group deleted
-    not_found: This group doesn't exist
-    none: No group
+    # Contact
+    link_contact_list: Contacts list
+    link_contact_create: Create a contact
+    link_contact_edit: Edit a contact
+    link_contact_delete: Delete a contact
+
+    # Group
+    link_group_list: Groups list
+    link_group_create: Create a group
+    link_group_edit: Edit a group
+    link_group_delete: Delete a group
+
+list:
+
+    # Contact
+    label_firstname: Firstname
+    label_lastname: Lastname
+
+    # Group
+    label_name: Name
+
+form:
+
+    # Contact
+    label_civility: Civility
+    label_firstname: Firstname
+    label_lastname: Lastname
+    label_description: Description
+    label_location: Location
+    label_phone: Phone
+    label_fax: Fax
+    label_mobile: Mobile
+    label_email: E-mail
+    label_website: Website
+    label_groups: Groups
+
+    # Group
+    label_name: Name
+    # label_description: Description

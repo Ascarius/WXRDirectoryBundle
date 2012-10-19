@@ -17,43 +17,33 @@ class ContactAdmin extends Admin
         $formMapper
             ->add('civility', 'sonata_type_translatable_choice', array(
                 'required' => false,
-                'label' => 'contact.civility',
                 'choices' => Civility::getList()
             ))
             ->add('firstname', null, array(
-                'label' => 'contact.firstname',
-                'required' => false,
+                'required' => false
             ))
             ->add('lastname', null, array(
-                'label' => 'contact.lastname'
             ))
             ->add('description', null, array(
-                'required' => false,
-                'label' => 'contact.description'
+                'required' => false
             ))
             ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
-                'required' => false,
-                'label' => 'contact.phone'
+                'required' => false
             ))
             ->add('fax', null, array(
-                'required' => false,
-                'label' => 'contact.fax'
+                'required' => false
             ))
             ->add('mobile', null, array(
-                'required' => false,
-                'label' => 'contact.mobile'
+                'required' => false
             ))
             ->add('email', null, array(
-                'required' => false,
-                'label' => 'contact.email'
+                'required' => false
             ))
             ->add('website', null, array(
-                'required' => false,
-                'label' => 'contact.website'
+                'required' => false
             ))
             ->add('groups', 'entity', array(
-                'label' => 'group.groups',
                 'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
                 'multiple' => true,
                 'expanded' => true,
@@ -65,27 +55,17 @@ class ContactAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('firstname', null, array(
-                'label' => 'contact.firstname'
-            ))
-            ->add('lastname', null, array(
-                'label' => 'contact.lastname'
-            ))
-            ->add('description', null, array(
-                'label' => 'contact.description'
-            ))
+            ->add('firstname')
+            ->add('lastname')
+            ->add('description')
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('firstname', null, array(
-                'label' => 'contact.firstname'
-            ))
-            ->addIdentifier('lastname', null, array(
-                'label' => 'contact.lastname'
-            ))
+            ->addIdentifier('firstname')
+            ->addIdentifier('lastname')
         ;
     }
 

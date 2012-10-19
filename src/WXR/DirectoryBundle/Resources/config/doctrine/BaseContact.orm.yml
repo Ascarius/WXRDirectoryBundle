@@ -13,7 +13,7 @@ WXR\DirectoryBundle\Entity\BaseContact:
             gedmo:
                 slug: { fields: [ firstname, lastname ] }
         civility:
-            length: 10
+            length: 20
             nullable: true
         firstname:
             length: 100
