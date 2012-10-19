@@ -2,6 +2,7 @@ parameters:
 
     wxr_directory.contact.class: WXR\DirectoryBundle\Entity\Contact
     wxr_directory.group.class: WXR\DirectoryBundle\Entity\Group
+    wxr_directory.translation_domain: WXRDirectoryBundle
 
 services:
 
@@ -29,13 +30,15 @@ services:
     wxr_directory.admin.contact:
         class: WXR\DirectoryBundle\Admin\Entity\ContactAdmin
         arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
+        calls:
+            - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
         tags:
             -
                 name: sonata.admin
                 manager_type: orm
                 group: directory.directory
                 label: contact.contacts
-                label_catalogue: WXRDirectoryBundle
+                label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.noop
 
     # Group
@@ -62,11 +65,13 @@ services:
     wxr_directory.admin.group:
         class: WXR\DirectoryBundle\Admin\Entity\GroupAdmin
         arguments: [ ~, WXR\DirectoryBundle\Entity\Group, SonataAdminBundle:CRUD ]
+        calls:
+            - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
         tags:
             -
                 name: sonata.admin
                 manager_type: orm
                 group: directory.directory
                 label: group.groups
-                label_catalogue: WXRDirectoryBundle
+                label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.noop

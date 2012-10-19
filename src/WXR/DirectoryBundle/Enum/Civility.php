@@ -13,11 +13,11 @@ class Civility
     public static function getList()
     {
         return array(
-            static::MISSTRESS => 'wxr_directory.civility.misstress',
-            static::MISTER    => 'wxr_directory.civility.mister',
-            static::DOCTOR    => 'wxr_directory.civility.doctor',
-            static::PROFESSOR => 'wxr_directory.civility.professor',
-            static::MASTER    => 'wxr_directory.civility.master'
+            static::MISSTRESS => 'civility.misstress',
+            static::MISTER    => 'civility.mister',
+            static::DOCTOR    => 'civility.doctor',
+            static::PROFESSOR => 'civility.professor',
+            static::MASTER    => 'civility.master'
         );
     }
 }

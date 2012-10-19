@@ -1,13 +1,13 @@
 directory:
-    directory: Directory
-    directories: Directories
+    directory: Annuaire
+    directories: Annuaires
 
 civility:
-    misstress: Mme
-    mister: M
-    doctor: Dr
-    professor: Pr
-    master: Me
+    misstress: Mme.
+    mister: M.
+    doctor: Dr.
+    professor: Pr.
+    master: Me.
 
 contact:
     contact: Contact

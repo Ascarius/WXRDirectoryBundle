@@ -17,43 +17,43 @@ class ContactAdmin extends Admin
         $formMapper
             ->add('civility', 'sonata_type_translatable_choice', array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.civility',
+                'label' => 'contact.civility',
                 'choices' => Civility::getList()
             ))
             ->add('firstname', null, array(
-                'label' => 'wxr_directory.contact.firstname',
+                'label' => 'contact.firstname',
                 'required' => false,
             ))
             ->add('lastname', null, array(
-                'label' => 'wxr_directory.contact.lastname'
+                'label' => 'contact.lastname'
             ))
             ->add('description', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.description'
+                'label' => 'contact.description'
             ))
             ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.phone'
+                'label' => 'contact.phone'
             ))
             ->add('fax', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.fax'
+                'label' => 'contact.fax'
             ))
             ->add('mobile', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.mobile'
+                'label' => 'contact.mobile'
             ))
             ->add('email', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.email'
+                'label' => 'contact.email'
             ))
             ->add('website', null, array(
                 'required' => false,
-                'label' => 'wxr_directory.contact.website'
+                'label' => 'contact.website'
             ))
             ->add('groups', 'entity', array(
-                'label' => 'wxr_directory.group.groups',
+                'label' => 'group.groups',
                 'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
                 'multiple' => true,
                 'expanded' => true,
@@ -66,13 +66,13 @@ class ContactAdmin extends Admin
     {
         $datagridMapper
             ->add('firstname', null, array(
-                'label' => 'wxr_directory.contact.firstname'
+                'label' => 'contact.firstname'
             ))
             ->add('lastname', null, array(
-                'label' => 'wxr_directory.contact.lastname'
+                'label' => 'contact.lastname'
             ))
             ->add('description', null, array(
-                'label' => 'wxr_directory.contact.description'
+                'label' => 'contact.description'
             ))
         ;
     }
@@ -81,10 +81,10 @@ class ContactAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('firstname', null, array(
-                'label' => 'wxr_directory.contact.firstname'
+                'label' => 'contact.firstname'
             ))
             ->addIdentifier('lastname', null, array(
-                'label' => 'wxr_directory.contact.lastname'
+                'label' => 'contact.lastname'
             ))
         ;
     }
