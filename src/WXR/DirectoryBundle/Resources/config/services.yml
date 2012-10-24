@@ -32,7 +32,7 @@ services:
         arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
         calls:
             - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
-            - [ setTemplate, [ edit, WXRGeoBundle:CRUD:edit.twig.html ] ]
+            - [ setTemplate, [ edit, WXRGeoBundle:CRUD:edit.html.twig ] ]
         tags:
             -
                 name: sonata.admin
