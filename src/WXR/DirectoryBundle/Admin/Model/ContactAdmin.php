@@ -26,7 +26,8 @@ class ContactAdmin extends Admin
             ->add('lastname', null, array(
             ))
             ->add('description', null, array(
-                'required' => false
+                'required' => false,
+                'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
             ))
             ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
             ->add('phone', null, array(
