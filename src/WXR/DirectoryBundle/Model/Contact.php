@@ -35,7 +35,7 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
-    protected $fullname
+    protected $fullname;
 
     /**
      * @var string
