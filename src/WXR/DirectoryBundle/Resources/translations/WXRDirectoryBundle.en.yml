@@ -27,8 +27,7 @@ list:
 
 filter:
 
-    label_firstname: Firstname
-    label_lastname: Lastname
+    label_fullname: Fullname
     label_description: Description
 
     label_name: Name

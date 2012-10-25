@@ -59,7 +59,7 @@ class ContactAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('fullame')
+            ->addIdentifier('fullname')
             ->add('location')
         ;
     }
