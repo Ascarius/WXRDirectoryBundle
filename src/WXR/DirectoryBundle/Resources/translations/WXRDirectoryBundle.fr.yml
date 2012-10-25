@@ -5,14 +5,14 @@ groups: Groupes
 breadcrumb:
 
     # Contact
-    link_contact_list: Liste des contacts
-    link_contact_create: Créer un contact
+    link_contact_list: Contacts
+    link_contact_create: Ajouter un contact
     link_contact_edit: Editer un contact
     link_contact_delete: Supprimer un contact
 
     # Group
-    link_group_list: Liste des groupes
-    link_group_create: Créer un groupe
+    link_group_list: Groupes de contacts
+    link_group_create: Ajouter un groupe
     link_group_edit: Editer un groupe
     link_group_delete: Supprimer groupe
 
@@ -20,6 +20,7 @@ list:
 
     # Contact
     label_fullname: Nom complet
+    label_groups: Groupes
     label_location: Lieux
 
     # Group

@@ -60,6 +60,7 @@ class ContactAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('fullname')
+            ->add('groups')
             ->add('location')
         ;
     }
