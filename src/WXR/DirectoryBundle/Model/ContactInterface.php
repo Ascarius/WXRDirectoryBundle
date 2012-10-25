@@ -90,49 +90,34 @@ interface ContactInterface
     public function getSlug();
 
     /**
-     * Set civility
+     * Set position
      *
-     * @param string $civility
+     * @param integer $position
      * @return ContactInterface
      */
-    public function setCivility($civility);
+    public function setPosition($position);
 
     /**
-     * Get civility
+     * Get position
+     *
+     * @return integer
+     */
+    public function getPosition();
+
+    /**
+     * Set fullname
+     *
+     * @param string $fullname
+     * @return ContactInterface
+     */
+    public function setFullname($fullname);
+
+    /**
+     * Get fullname
      *
      * @return string
      */
-    public function getCivility();
-
-    /**
-     * Set firstname
-     *
-     * @param string $firstname
-     * @return ContactInterface
-     */
-    public function setFirstname($firstname);
-
-    /**
-     * Get firstname
-     *
-     * @return string
-     */
-    public function getFirstname();
-
-    /**
-     * Set lastname
-     *
-     * @param string $lastname
-     * @return ContactInterface
-     */
-    public function setLastname($lastname);
-
-    /**
-     * Get lastname
-     *
-     * @return string
-     */
-    public function getLastname();
+    public function getFullname();
 
     /**
      * Set description

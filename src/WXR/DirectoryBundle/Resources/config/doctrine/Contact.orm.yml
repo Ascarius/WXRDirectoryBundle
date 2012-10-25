@@ -1,6 +1,9 @@
 WXR\DirectoryBundle\Entity\Contact:
     type: entity
     table: wxr_directory_contact
+    indexes:
+        fullname_IDX:
+            columns: [ fullname ]
     manyToMany:
         groups:
             targetEntity: WXR\DirectoryBundle\Entity\Group

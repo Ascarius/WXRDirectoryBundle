@@ -8,18 +8,16 @@ WXR\DirectoryBundle\Entity\BaseContact:
     fields:
         enabled:
             type: boolean
+        position:
+            type: integer
+            gedmo:
+                - sortablePosition
         slug:
             length: 255
             gedmo:
-                slug: { fields: [ firstname, lastname ] }
-        civility:
-            length: 20
-            nullable: true
-        firstname:
-            length: 100
-            nullable: true
-        lastname:
-            length: 100
+                slug: { fields: [ fullname ] }
+        fullname:
+            length: 255
         description:
             type: text
             nullable: true

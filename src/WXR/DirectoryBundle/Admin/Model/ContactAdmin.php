@@ -15,16 +15,7 @@ class ContactAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('civility', 'sonata_type_translatable_choice', array(
-                'required' => false,
-                'choices' => Civility::getList(),
-                'catalogue' => 'WXRDirectoryBundle'
-            ))
-            ->add('firstname', null, array(
-                'required' => false
-            ))
-            ->add('lastname', null, array(
-            ))
+            ->add('fullname')
             ->add('description', null, array(
                 'required' => false,
                 'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
@@ -51,14 +42,16 @@ class ContactAdmin extends Admin
                 'expanded' => true,
                 'required' => false
             ))
+            ->add('position', 'integer', array(
+                'required' => false
+            ))
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('firstname')
-            ->add('lastname')
+            ->add('fullname')
             ->add('description')
         ;
     }
@@ -66,8 +59,8 @@ class ContactAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('firstname')
-            ->addIdentifier('lastname')
+            ->addIdentifier('fullame')
+            ->add('location')
         ;
     }
 

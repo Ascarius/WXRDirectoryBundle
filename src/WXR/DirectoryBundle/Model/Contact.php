@@ -23,6 +23,11 @@ abstract class Contact implements ContactInterface
     protected $enabled;
 
     /**
+     * @var integer
+     */
+    protected $position;
+
+    /**
      * @var string
      */
     protected $slug;
@@ -30,17 +35,7 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
-    protected $civility;
-
-    /**
-     * @var string
-     */
-    protected $firstname;
-
-    /**
-     * @var string
-     */
-    protected $lastname;
+    protected $fullname
 
     /**
      * @var string
@@ -184,6 +179,24 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function setSlug($slug)
     {
         $this->slug = $slug;
@@ -202,9 +215,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function setCivility($civility)
+    public function setFullname($fullname)
     {
-        $this->civility = $civility;
+        $this->fullname = $fullname;
 
         return $this;
     }
@@ -212,45 +225,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function getCivility()
+    public function getFullname()
     {
-        return $this->civility;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setFirstname($firstname)
-    {
-        $this->firstname = $firstname;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getFirstname()
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getLastname()
-    {
-        return $this->lastname;
+        return $this->fullname;
     }
 
     /**
