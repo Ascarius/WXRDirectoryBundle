@@ -90,21 +90,6 @@ interface ContactInterface
     public function getSlug();
 
     /**
-     * Set position
-     *
-     * @param integer $position
-     * @return ContactInterface
-     */
-    public function setPosition($position);
-
-    /**
-     * Get position
-     *
-     * @return integer
-     */
-    public function getPosition();
-
-    /**
      * Set fullname
      *
      * @param string $fullname
@@ -223,6 +208,21 @@ interface ContactInterface
      * @return string
      */
     public function getWebsite();
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return ContactInterface
+     */
+    public function setPosition($position);
+
+    /**
+     * Get position
+     *
+     * @return integer
+     */
+    public function getPosition();
 
     /**
      * @return string

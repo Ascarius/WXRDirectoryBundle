@@ -23,11 +23,6 @@ abstract class Contact implements ContactInterface
     protected $enabled;
 
     /**
-     * @var integer
-     */
-    protected $position;
-
-    /**
      * @var string
      */
     protected $slug;
@@ -72,11 +67,17 @@ abstract class Contact implements ContactInterface
      */
     protected $website;
 
+    /**
+     * @var integer
+     */
+    protected $position;
+
 
     public function __construct()
     {
         $this->enabled = true;
         $this->groups = array();
+        $this->position = 0;
     }
 
     /**
@@ -174,24 +175,6 @@ abstract class Contact implements ContactInterface
     public function getEnabled()
     {
         return $this->enabled;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPosition($position)
-    {
-        $this->position = $position;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPosition()
-    {
-        return $this->position;
     }
 
     /**
@@ -354,6 +337,24 @@ abstract class Contact implements ContactInterface
     public function getWebsite()
     {
         return $this->website;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 
     /**
