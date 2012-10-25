@@ -22,7 +22,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
      */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
-        $default = array('lastname' => 'ASC');
+        $default = array('position' => 'ASC', 'fullname' => 'ASC');
 
         $orderBy = $orderBy ?
             array_merge($default, $orderBy) : $default;
