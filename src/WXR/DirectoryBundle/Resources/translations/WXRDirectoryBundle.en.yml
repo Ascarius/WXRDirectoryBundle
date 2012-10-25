@@ -2,13 +2,6 @@ wxr_directory: Directory
 contacts: Contacts
 groups: Groups
 
-civility:
-    misstress: Mrs.
-    mister: Mr.
-    doctor: Dr.
-    professor: Prof.
-    master: Master.
-
 breadcrumb:
 
     # Contact
@@ -26,8 +19,8 @@ breadcrumb:
 list:
 
     # Contact
-    label_firstname: Firstname
-    label_lastname: Lastname
+    label_fullname: Fullname
+    label_location: Location
 
     # Group
     label_name: Name
@@ -43,9 +36,7 @@ filter:
 form:
 
     # Contact
-    label_civility: Civility
-    label_firstname: Firstname
-    label_lastname: Lastname
+    label_fullname: Fullname
     label_description: Description
     label_location: Location
     label_phone: Phone
@@ -57,4 +48,3 @@ form:
 
     # Group
     label_name: Name
-    # label_description: Description

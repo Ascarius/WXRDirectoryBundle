@@ -2,13 +2,6 @@ wxr_directory: Annuaire
 contacts: Contacts
 groups: Groupes
 
-civility:
-    misstress: Mme.
-    mister: M.
-    doctor: Dr.
-    professor: Pr.
-    master: Me.
-
 breadcrumb:
 
     # Contact
@@ -26,8 +19,8 @@ breadcrumb:
 list:
 
     # Contact
-    label_firstname: Prénom
-    label_lastname: Nom
+    label_fullname: Nom complet
+    label_location: Lieux
 
     # Group
     label_name: Nom
@@ -43,9 +36,7 @@ filter:
 form:
 
     # Contact
-    label_civility: Titre
-    label_firstname: Prénom
-    label_lastname: Nom
+    label_fullname: Nom complet
     label_description: Description
     label_location: Lieux
     label_phone: Téléphone
