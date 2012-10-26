@@ -6,15 +6,15 @@ breadcrumb:
 
     # Contact
     link_contact_list: Contacts
-    link_contact_create: Ajouter un contact
-    link_contact_edit: Editer un contact
-    link_contact_delete: Supprimer un contact
+    link_contact_create: Ajouter
+    link_contact_edit: Editer
+    link_contact_delete: Supprimer
 
     # Group
     link_group_list: Groupes de contacts
-    link_group_create: Ajouter un groupe
-    link_group_edit: Editer un groupe
-    link_group_delete: Supprimer groupe
+    link_group_create: Ajouter
+    link_group_edit: Editer
+    link_group_delete: Supprimer
 
 list:
 
