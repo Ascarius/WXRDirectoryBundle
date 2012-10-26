@@ -45,7 +45,7 @@ form:
     label_email: E-mail
     label_website: Site web
     label_groups: Groupes
+    label_position: Position
 
     # Group
     label_name: Nom
-    # label_description: Description
