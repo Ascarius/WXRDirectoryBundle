@@ -2,8 +2,15 @@ WXR\DirectoryBundle\Entity\Contact:
     type: entity
     table: wxr_directory_contact
     indexes:
-        fullname_IDX:
+        IDX_position:
+            columns: [ position ]
+        IDX_fullname:
             columns: [ fullname ]
+        IDX_enabled:
+            columns: [ enabled ]
+    uniqueConstraints:
+        UNIQ_slug:
+            columns: [ slug ]
     manyToMany:
         groups:
             targetEntity: WXR\DirectoryBundle\Entity\Group
