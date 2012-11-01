@@ -146,11 +146,11 @@ abstract class Contact implements ContactInterface
      */
     public function clearGroups()
     {
-        foreach ($this->contacts as $contact) {
-            $contact->removeContact($this);
+        foreach ($this->groups as $group) {
+            $group->removeContact($this);
         }
 
-        $this->contacts = array();
+        $this->groups = array();
 
         return $this;
     }

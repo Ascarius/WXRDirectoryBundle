@@ -56,11 +56,11 @@ abstract class BaseContact extends Contact
      */
     public function clearGroups()
     {
-        foreach ($this->contacts as $contact) {
-            $contact->removeContact($this);
+        foreach ($this->groups as $group) {
+            $group->removeContact($this);
         }
 
-        $this->contacts = new ArrayCollection();
+        $this->groups = new ArrayCollection();
 
         return $this;
     }
