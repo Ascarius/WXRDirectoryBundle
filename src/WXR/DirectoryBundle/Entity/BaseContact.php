@@ -18,6 +18,14 @@ abstract class BaseContact extends Contact
     }
 
     /**
+     * Update updatedAt
+     */
+    public function onPreUpdate()
+    {
+        $this->updatedAt = new \DateTime();
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function addGroup(GroupInterface $group)

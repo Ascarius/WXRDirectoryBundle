@@ -8,10 +8,6 @@ WXR\DirectoryBundle\Entity\BaseContact:
     fields:
         enabled:
             type: boolean
-        position:
-            type: integer
-            gedmo:
-                - sortablePosition
         slug:
             length: 255
             gedmo:
@@ -36,6 +32,10 @@ WXR\DirectoryBundle\Entity\BaseContact:
         website:
             length: 255
             nullable: true
+        position:
+            type: integer
+            gedmo:
+                - sortablePosition
     oneToOne:
         location:
             targetEntity: WXR\GeoBundle\Entity\Location
@@ -45,10 +45,5 @@ WXR\DirectoryBundle\Entity\BaseContact:
                 name: location_id
                 referencedColumnName: id
                 onDelete: SET NULL
-#    manyToOne:
-#        group:
-#            targetEntity: WXR\GeoBundle\Entity\Group
-#            joinColumn:
-#                name: group_id
-#                referencedColumnName: id
-#                onDelete: SET NULL
+    lifecycleCallbacks:
+        preUpdate: [ onPreUpdate ]
