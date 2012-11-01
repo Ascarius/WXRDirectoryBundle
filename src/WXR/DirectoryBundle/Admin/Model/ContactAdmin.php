@@ -8,8 +8,6 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 
-use WXR\DirectoryBundle\Enum\Civility;
-
 class ContactAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
