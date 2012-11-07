@@ -34,13 +34,13 @@ class ContactAdmin extends Admin
             ->add('website', null, array(
                 'required' => false
             ))
-            ->add('groups', 'entity', array(
+            ->add('groups', 'sonata_type_model', array(
                 'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
                 'multiple' => true,
                 'expanded' => true,
                 'required' => false
             ))
-            ->add('position', 'integer', array(
+        ->add('position', 'integer', array(
                 'required' => false
             ))
         ;
