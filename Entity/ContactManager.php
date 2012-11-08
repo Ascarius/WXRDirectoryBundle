@@ -23,7 +23,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
     protected function buildWhereClause(QueryBuilder $qb, array $criteria)
     {
         if (!array_key_exists('enabled', $criteria)) {
-            $criteria['enabled'] => true;
+            $criteria['enabled'] = true;
         }
 
         return parent::buildWhereClause($qb, $criteria);
