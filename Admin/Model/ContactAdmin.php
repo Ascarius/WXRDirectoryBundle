@@ -13,36 +13,47 @@ class ContactAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('fullname')
-            ->add('description', null, array(
-                'required' => false,
-                'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
-            ))
-            ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
-            ->add('phone', null, array(
-                'required' => false
-            ))
-            ->add('fax', null, array(
-                'required' => false
-            ))
-            ->add('mobile', null, array(
-                'required' => false
-            ))
-            ->add('email', null, array(
-                'required' => false
-            ))
-            ->add('website', null, array(
-                'required' => false
-            ))
-            ->add('groups', 'sonata_type_model', array(
-                'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
-                'multiple' => true,
-                'expanded' => true,
-                'required' => false
-            ))
-        ->add('position', 'integer', array(
-                'required' => false
-            ))
+            ->with('form.group_general')
+                ->add('fullname')
+                ->add('description', null, array(
+                    'required' => false,
+                    'attr' => array('class' => 'wysiwyg', 'rows' => 8)
+                ))
+            ->end()
+            ->with('form.group_particulars')
+                ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
+                ->add('phone', null, array(
+                    'required' => false
+                ))
+                ->add('fax', null, array(
+                    'required' => false
+                ))
+                ->add('mobile', null, array(
+                    'required' => false
+                ))
+                ->add('email', null, array(
+                    'required' => false
+                ))
+                ->add('website', null, array(
+                    'required' => false
+                ))
+            ->end()
+            ->with('form.group_groups')
+                ->add('groups', 'sonata_type_model', array(
+                    'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
+                    'multiple' => true,
+                    'expanded' => true,
+                    'required' => false
+                ))
+            ->end()
+            ->with('form.group_options')
+                ->add('enabled', null, array(
+                    'required' => false
+                ))
+                ->add('position', 'integer', array(
+                    'required' => false
+                ))
+            ->end()
         ;
     }
 

@@ -35,6 +35,11 @@ filter:
 
 form:
 
+    group_general: Général
+    group_particulars: Coordonnées
+    group_groups: Groupes
+    group_options: Options
+
     # Contact
     label_fullname: Nom complet
     label_description: Description
@@ -45,6 +50,7 @@ form:
     label_email: E-mail
     label_website: Site web
     label_groups: Groupes
+    label_enabled: Activé
     label_position: Position
 
     # Group
