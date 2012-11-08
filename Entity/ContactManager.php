@@ -20,6 +20,18 @@ class ContactManager extends BaseManager implements ContactManagerInterface
     /**
      * {@inheritDoc}
      */
+    protected function buildWhereClause(QueryBuilder $qb, array $criteria)
+    {
+        if (!array_key_exists('enabled', $criteria)) {
+            $criteria['enabled'] => true;
+        }
+
+        return parent::buildWhereClause($qb, $criteria);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
         $default = array('position' => 'ASC', 'fullname' => 'ASC');
@@ -27,6 +39,6 @@ class ContactManager extends BaseManager implements ContactManagerInterface
         $orderBy = $orderBy ?
             array_merge($default, $orderBy) : $default;
 
-        parent::buildOrderClause($qb, $orderBy);
+        return parent::buildOrderClause($qb, $orderBy);
     }
 }
