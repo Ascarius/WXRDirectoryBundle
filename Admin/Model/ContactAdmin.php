@@ -17,7 +17,7 @@ class ContactAdmin extends Admin
                 ->add('fullname')
                 ->add('description', null, array(
                     'required' => false,
-                    'attr' => array('class' => 'wysiwyg', 'rows' => 8)
+                    'attr' => array('data-wysiwyg' => true, 'rows' => 8)
                 ))
             ->end()
             ->with('form.group_particulars')
