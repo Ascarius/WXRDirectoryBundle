@@ -39,12 +39,6 @@ class ContactAdmin extends Admin
                 ))
             ->end()
             ->with('form.group_groups')
-                ->add('groups', 'sonata_type_model', array(
-                    'class' => 'WXR\\DirectoryBundle\\Entity\\Group',
-                    'multiple' => true,
-                    'expanded' => true,
-                    'required' => false
-                ))
             ->end()
             ->with('form.group_options')
                 ->add('enabled', null, array(

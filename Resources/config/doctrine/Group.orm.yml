@@ -1,8 +1,0 @@
-WXR\DirectoryBundle\Entity\Group:
-    type: entity
-    table: wxr_directory_group
-    manyToMany:
-        contacts:
-            targetEntity: WXR\DirectoryBundle\Entity\Contact
-            mappedBy: groups
-            orderBy: { position: ASC, fullname: ASC }

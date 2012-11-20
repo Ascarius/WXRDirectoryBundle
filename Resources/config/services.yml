@@ -1,20 +1,17 @@
 parameters:
 
-    wxr_directory.contact.class: WXR\DirectoryBundle\Entity\Contact
-    wxr_directory.group.class: WXR\DirectoryBundle\Entity\Group
-    wxr_directory.translation_domain: WXRDirectoryBundle
+    wxr_directory.contact.class: Application\WXR\DirectoryBundle\Entity\Contact
+    wxr_directory.group.class: Application\WXR\DirectoryBundle\Entity\Group
 
 services:
 
-    # Contact
-
-    wxr_directory.contact.manager:
+    wxr_directory.contact.manager.default:
         class: WXR\DirectoryBundle\Entity\ContactManager
         arguments: [@doctrine.orm.entity_manager, %wxr_directory.contact.class%]
 
     wxr_directory.contact.admin:
-        class: WXR\DirectoryBundle\Admin\Entity\ContactAdmin
-        arguments: [ ~, WXR\DirectoryBundle\Entity\Contact, SonataAdminBundle:CRUD ]
+        class: %wxr_directory.contact.admin.class%
+        arguments: [ ~, %wxr_directory.contact.class%, %wxr_directory.contact.admin.controller% ]
         calls:
             - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
             - [ setTemplate, [ edit, WXRGeoBundle:CRUD:edit.html.twig ] ]
@@ -27,15 +24,13 @@ services:
                 label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.underscore
 
-    # Group
-
-    wxr_directory.group.manager:
+    wxr_directory.group.manager.default:
         class: WXR\DirectoryBundle\Entity\GroupManager
         arguments: [@doctrine.orm.entity_manager, %wxr_directory.group.class%]
 
     wxr_directory.group.admin:
         class: WXR\DirectoryBundle\Admin\Entity\GroupAdmin
-        arguments: [ ~, WXR\DirectoryBundle\Entity\Group, SonataAdminBundle:CRUD ]
+        arguments: [ ~, %wxr_directory.group.class%, %wxr_directory.group.admin.controller% ]
         calls:
             - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
         tags:

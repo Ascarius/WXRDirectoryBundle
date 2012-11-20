@@ -1,4 +1,4 @@
-WXR\DirectoryBundle\Entity\Contact:
+Application\WXR\DirectoryBundle\Entity\Contact:
     type: entity
     table: wxr_directory_contact
     indexes:
@@ -13,8 +13,7 @@ WXR\DirectoryBundle\Entity\Contact:
             columns: [ slug ]
     manyToMany:
         groups:
-            targetEntity: WXR\DirectoryBundle\Entity\Group
-            inversedBy: contacts
+            targetEntity: Application\WXR\DirectoryBundle\Entity\Group
             orderBy: { position: ASC, name: ASC }
             joinTable:
                 name: wxr_directory_contact_group

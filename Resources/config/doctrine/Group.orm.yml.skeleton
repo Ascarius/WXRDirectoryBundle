@@ -1,0 +1,6 @@
+Application\WXR\DirectoryBundle\Entity\Group:
+    type: entity
+    table: wxr_directory_group
+    uniqueConstraints:
+        UNIQ_slug:
+            columns: [ slug ]
