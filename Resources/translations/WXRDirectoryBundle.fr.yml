@@ -21,7 +21,7 @@ list:
     # Contact
     label_fullname: Nom complet
     label_groups: Groupes
-    label_location: Lieux
+    label_address: Adresse
 
     # Group
     label_name: Nom
@@ -43,7 +43,7 @@ form:
     # Contact
     label_fullname: Nom complet
     label_description: Description
-    label_location: Lieux
+    label_address: Adresse
     label_phone: Téléphone
     label_fax: Fax
     label_mobile: Mobile

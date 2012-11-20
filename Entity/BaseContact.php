@@ -6,14 +6,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 use WXR\DirectoryBundle\Model\Contact;
 use WXR\DirectoryBundle\Model\GroupInterface;
-use WXR\GeoBundle\Entity\Location;
+use WXR\GeoBundle\Entity\Address;
 
 abstract class BaseContact extends Contact
 {
     public function __construct()
     {
         parent::__construct();
-        $this->location = new Location();
+        $this->address = new Address();
         $this->groups = new ArrayCollection();
     }
 
@@ -76,13 +76,13 @@ abstract class BaseContact extends Contact
     /**
      * {@inheritDoc}
      */
-    public function getLocation()
+    public function getAddress()
     {
         // Prevent deletion
-        if (null === $this->location) {
-            $this->location = new Location();
+        if (null === $this->address) {
+            $this->address = new Address();
         }
 
-        return $this->location;
+        return $this->address;
     }
 }

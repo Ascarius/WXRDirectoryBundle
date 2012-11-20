@@ -43,12 +43,12 @@ WXR\DirectoryBundle\Entity\BaseContact:
             column: updated_at
             type: datetime
     oneToOne:
-        location:
-            targetEntity: WXR\GeoBundle\Entity\Location
+        address:
+            targetEntity: WXR\GeoBundle\Entity\Address
             fetch: EAGER
             cascade: [ all ]
             joinColumn:
-                name: location_id
+                name: address_id
                 referencedColumnName: id
                 onDelete: SET NULL
     lifecycleCallbacks:

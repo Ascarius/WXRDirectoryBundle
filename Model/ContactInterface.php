@@ -2,7 +2,7 @@
 
 namespace WXR\DirectoryBundle\Model;
 
-use WXR\GeoBundle\Model\LocationInterface;
+use WXR\GeoBundle\Model\AddressInterface;
 
 interface ContactInterface
 {
@@ -120,19 +120,19 @@ interface ContactInterface
     public function getDescription();
 
     /**
-     * Set location
+     * Set address
      *
-     * @param LocationInterface $location
+     * @param AddressInterface $address
      * @return ContactInterface
      */
-    public function setLocation(LocationInterface $location);
+    public function setAddress(AddressInterface $address);
 
     /**
-     * Get location
+     * Get address
      *
-     * @return Location
+     * @return Address
      */
-    public function getLocation();
+    public function getAddress();
 
     /**
      * Set phone

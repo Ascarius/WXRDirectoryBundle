@@ -3,7 +3,7 @@
 namespace WXR\DirectoryBundle\Model;
 
 use WXR\DirectoryBundle\Enum\Civility;
-use WXR\GeoBundle\Model\LocationInterface;
+use WXR\GeoBundle\Model\AddressInterface;
 
 abstract class Contact implements ContactInterface
 {
@@ -40,7 +40,7 @@ abstract class Contact implements ContactInterface
     /**
      * @var string
      */
-    protected $location;
+    protected $address;
 
     /**
      * @var string
@@ -246,9 +246,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function setLocation(LocationInterface $location)
+    public function setAddress(AddressInterface $address)
     {
-        $this->location = $location;
+        $this->address = $address;
 
         return $this;
     }
@@ -256,9 +256,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function getLocation()
+    public function getAddress()
     {
-        return $this->location;
+        return $this->address;
     }
 
     /**

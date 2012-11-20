@@ -21,7 +21,7 @@ class ContactAdmin extends Admin
                 ))
             ->end()
             ->with('form.group_particulars')
-                ->add('location', 'sonata_type_admin', array(), array('edit' => 'inline'))
+                ->add('address', 'sonata_type_admin', array(), array('edit' => 'inline'))
                 ->add('phone', null, array(
                     'required' => false
                 ))
@@ -64,7 +64,7 @@ class ContactAdmin extends Admin
         $listMapper
             ->addIdentifier('fullname')
             ->add('groups')
-            ->add('location')
+            ->add('address')
         ;
     }
 
