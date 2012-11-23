@@ -44,7 +44,7 @@ WXR\DirectoryBundle\Entity\BaseContact:
             type: datetime
     oneToOne:
         address:
-            targetEntity: WXR\GeoBundle\Entity\Address
+            targetEntity: Application\WXR\GeoBundle\Entity\Address
             fetch: EAGER
             cascade: [ all ]
             joinColumn:
