@@ -6,7 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 use WXR\DirectoryBundle\Model\Contact;
 use WXR\DirectoryBundle\Model\GroupInterface;
-use WXR\GeoBundle\Entity\Address;
+use Application\WXR\GeoBundle\Entity\Address;
 
 abstract class BaseContact extends Contact
 {
