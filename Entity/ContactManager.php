@@ -47,7 +47,6 @@ class ContactManager extends BaseManager implements ContactManagerInterface
         }
 
         if ($needJoins) {
-            die('need');
             $qb
                 ->leftJoin($this->alias.'.groups', 'group')
             ;
