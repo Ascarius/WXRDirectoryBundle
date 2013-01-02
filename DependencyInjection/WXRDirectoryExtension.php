@@ -23,9 +23,9 @@ class WXRDirectoryExtension extends Extension
         $container->setParameter('wxr_directory.contact.admin.class', $config['contact']['admin']['class']);
         $container->setParameter('wxr_directory.contact.admin.controller', $config['contact']['admin']['controller']);
    
-        $container->setAlias('wxr_directory.group.manager', $config['group']['manager']);
-        $container->setParameter('wxr_directory.group.admin.class', $config['group']['admin']['class']);
-        $container->setParameter('wxr_directory.group.admin.controller', $config['group']['admin']['controller']);
+        $container->setAlias('wxr_directory.category.manager', $config['category']['manager']);
+        $container->setParameter('wxr_directory.category.admin.class', $config['category']['admin']['class']);
+        $container->setParameter('wxr_directory.category.admin.controller', $config['category']['admin']['controller']);
    
         // $container->setAlias('wxr_directory.tag.manager', $config['tag']['manager']);
         // $container->setParameter('wxr_directory.tag.admin.class', $config['tag']['admin']['class']);

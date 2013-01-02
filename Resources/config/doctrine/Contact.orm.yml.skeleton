@@ -11,12 +11,17 @@ Application\WXR\DirectoryBundle\Entity\Contact:
     uniqueConstraints:
         UNIQ_slug:
             columns: [ slug ]
+    fields:
+        slug:
+            length: 255
+            gedmo:
+                slug: { fields: [ fullname ] }
     manyToMany:
-        groups:
-            targetEntity: Application\WXR\DirectoryBundle\Entity\Group
+        categories:
+            targetEntity: Application\WXR\DirectoryBundle\Entity\Category
             orderBy: { position: ASC, name: ASC }
             joinTable:
-                name: wxr_directory_contact_group
+                name: wxr_directory_contact_has_categories
                 joinColumns:
                     contact_id:
                         referencedColumnName: id

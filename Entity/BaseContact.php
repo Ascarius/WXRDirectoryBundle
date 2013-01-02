@@ -5,7 +5,7 @@ namespace WXR\DirectoryBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 
 use WXR\DirectoryBundle\Model\Contact;
-use WXR\DirectoryBundle\Model\GroupInterface;
+use WXR\DirectoryBundle\Model\CategoryInterface;
 use Application\WXR\GeoBundle\Entity\Address;
 
 abstract class BaseContact extends Contact
@@ -14,7 +14,7 @@ abstract class BaseContact extends Contact
     {
         parent::__construct();
         $this->address = new Address();
-        $this->groups = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     /**
@@ -28,11 +28,10 @@ abstract class BaseContact extends Contact
     /**
      * {@inheritDoc}
      */
-    public function addGroup(GroupInterface $group)
+    public function addCategory(CategoryInterface $category)
     {
-        if (! $this->hasGroup($group)) {
-            $group->addContact($this);
-            $this->groups->add($group);
+        if (! $this->hasCategory($category)) {
+            $this->categories->add($category);
         }
 
         return $this;
@@ -41,11 +40,10 @@ abstract class BaseContact extends Contact
     /**
      * {@inheritDoc}
      */
-    public function removeGroup(GroupInterface $group)
+    public function removeCategory(CategoryInterface $category)
     {
-        if ($this->hasGroup($group)) {
-            $group->removeContact($this);
-            $this->groups->removeElement($group);
+        if ($this->hasCategory($category)) {
+            $this->categories->removeElement($category);
         }
 
         return $this;
@@ -54,13 +52,9 @@ abstract class BaseContact extends Contact
     /**
      * {@inheritDoc}
      */
-    public function clearGroups()
+    public function clearCategories()
     {
-        foreach ($this->groups as $group) {
-            $group->removeContact($this);
-        }
-
-        $this->groups = new ArrayCollection();
+        $this->categories = new ArrayCollection();
 
         return $this;
     }
@@ -68,9 +62,9 @@ abstract class BaseContact extends Contact
     /**
      * {@inheritDoc}
      */
-    public function hasGroup(GroupInterface $group)
+    public function hasCategory(CategoryInterface $category)
     {
-        return $this->groups->contains($group);
+        return $this->categories->contains($category);
     }
 
     /**
@@ -78,11 +72,6 @@ abstract class BaseContact extends Contact
      */
     public function getAddress()
     {
-        // Prevent deletion
-        if (null === $this->address) {
-            $this->address = new Address();
-        }
-
         return $this->address;
     }
 }

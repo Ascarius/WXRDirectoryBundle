@@ -14,50 +14,50 @@ interface ContactInterface
     public function getId();
 
     /**
-     * Set group
+     * Set category
      *
-     * @param GroupInterface[] $groups
+     * @param CategoryInterface[] $categories
      * @return ContactInterface
      */
-    public function setGroups($groups);
+    public function setCategories($categories);
 
     /**
-     * Add group
+     * Add category
      *
-     * @param GroupInterface $group
+     * @param CategoryInterface $category
      * @return ContactInterface
      */
-    public function addGroup(GroupInterface $group);
+    public function addCategory(CategoryInterface $category);
 
     /**
-     * Remove group
+     * Remove category
      *
-     * @param GroupInterface $group
+     * @param CategoryInterface $category
      * @return ContactInterface
      */
-    public function removeGroup(GroupInterface $group);
+    public function removeCategory(CategoryInterface $category);
 
     /**
-     * Clear groups
+     * Clear categories
      *
      * @return ContactInterface
      */
-    public function clearGroups();
+    public function clearCategories();
 
     /**
-     * Get group
+     * Get category
      *
-     * @return GroupInterface[]
+     * @return CategoryInterface[]
      */
-    public function getGroups();
+    public function getCategories();
 
     /**
-     * Has group
+     * Has category
      *
-     * @param GroupInterface $group
+     * @param CategoryInterface $category
      * @return boolean
      */
-    public function hasGroup(GroupInterface $group);
+    public function hasCategory(CategoryInterface $category);
 
     /**
      * Set enabled

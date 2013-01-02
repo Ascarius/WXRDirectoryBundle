@@ -13,9 +13,9 @@ abstract class Contact implements ContactInterface
     protected $id;
 
     /**
-     * @var GroupInterface[]
+     * @var CategoryInterface[]
      */
-    protected $groups;
+    protected $categories;
 
     /**
      * @var boolean
@@ -86,7 +86,7 @@ abstract class Contact implements ContactInterface
     public function __construct()
     {
         $this->enabled = true;
-        $this->groups = array();
+        $this->categories = array();
         $this->position = 0;
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
@@ -103,12 +103,12 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function setGroups($groups)
+    public function setCategories($categories)
     {
-        $this->clearGroups();
+        $this->clearCategories();
 
-        foreach ($groups as $group) {
-            $this->addGroup($group);
+        foreach ($categories as $category) {
+            $this->addCategory($category);
         }
 
         return $this;
@@ -118,11 +118,10 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function addGroup(GroupInterface $group)
+    public function addCategory(CategoryInterface $category)
     {
-        if (! $this->hasGroup($group)) {
-            $group->addContact($this);
-            $this->groups[] = $group;
+        if (! $this->hasCategory($category)) {
+            $this->categories[] = $category;
         }
 
         return $this;
@@ -131,11 +130,10 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function removeGroup(GroupInterface $group)
+    public function removeCategory(CategoryInterface $category)
     {
-        if (false !== ($key = array_search($group, $this->groups, true))) {
-            $group->removeContact($this);
-            unset($this->groups[$key]);
+        if (false !== ($key = array_search($category, $this->categories, true))) {
+            unset($this->categories[$key]);
         }
 
         return $this;
@@ -144,13 +142,9 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function clearGroups()
+    public function clearCategories()
     {
-        foreach ($this->groups as $group) {
-            $group->removeContact($this);
-        }
-
-        $this->groups = array();
+        $this->categories = array();
 
         return $this;
     }
@@ -158,17 +152,17 @@ abstract class Contact implements ContactInterface
     /**
      * {@inheritDoc}
      */
-    public function getGroups()
+    public function getCategories()
     {
-        return $this->groups;
+        return $this->categories;
     }
 
     /**
      * {@inheritDoc}
      */
-    public function hasGroup(GroupInterface $group)
+    public function hasCategory(CategoryInterface $category)
     {
-        return false !== array_search($group, $this->groups, true);
+        return false !== array_search($category, $this->categories, true);
     }
 
     /**

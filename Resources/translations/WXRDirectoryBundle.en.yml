@@ -1,6 +1,6 @@
 wxr_directory: Directory
 contacts: Contacts
-groups: Groups
+categories: Categories
 
 breadcrumb:
 
@@ -10,20 +10,20 @@ breadcrumb:
     link_contact_edit: Edit
     link_contact_delete: Delete
 
-    # Group
-    link_group_list: Groups of contacts
-    link_group_create: Add
-    link_group_edit: Edit
-    link_group_delete: Delete
+    # Category
+    link_category_list: Categories of contacts
+    link_category_create: Add
+    link_category_edit: Edit
+    link_category_delete: Delete
 
 list:
 
     # Contact
     label_fullname: Fullname
-    label_groups: Groups
+    label_categories: Categories
     label_address: Address
 
-    # Group
+    # Category
     label_name: Name
 
 filter:
@@ -37,7 +37,7 @@ form:
 
     group_general: General
     group_particulars: Particulars
-    group_groups: Groupes
+    group_categories: Categories
     group_options: Options
 
     # Contact
@@ -49,9 +49,9 @@ form:
     label_mobile: Mobile
     label_email: E-mail
     label_website: Website
-    label_groups: Groups
+    label_categories: Categories
     label_enabled: Enabled
     label_position: Position
 
-    # Group
+    # Category
     label_name: Name

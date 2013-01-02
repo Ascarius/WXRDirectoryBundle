@@ -8,10 +8,6 @@ WXR\DirectoryBundle\Entity\BaseContact:
     fields:
         enabled:
             type: boolean
-        slug:
-            length: 255
-            gedmo:
-                slug: { fields: [ fullname ] }
         fullname:
             length: 255
         description:

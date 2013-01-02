@@ -1,7 +1,7 @@
 parameters:
 
     wxr_directory.contact.class: Application\WXR\DirectoryBundle\Entity\Contact
-    wxr_directory.group.class: Application\WXR\DirectoryBundle\Entity\Group
+    wxr_directory.category.class: Application\WXR\DirectoryBundle\Entity\Category
 
 services:
 
@@ -24,13 +24,13 @@ services:
                 label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.underscore
 
-    wxr_directory.group.manager.default:
-        class: WXR\DirectoryBundle\Entity\GroupManager
-        arguments: [@doctrine.orm.entity_manager, %wxr_directory.group.class%]
+    wxr_directory.category.manager.default:
+        class: WXR\DirectoryBundle\Entity\CategoryManager
+        arguments: [@doctrine.orm.entity_manager, %wxr_directory.category.class%]
 
-    wxr_directory.group.admin:
-        class: WXR\DirectoryBundle\Admin\Entity\GroupAdmin
-        arguments: [ ~, %wxr_directory.group.class%, %wxr_directory.group.admin.controller% ]
+    wxr_directory.category.admin:
+        class: WXR\DirectoryBundle\Admin\Entity\CategoryAdmin
+        arguments: [ ~, %wxr_directory.category.class%, %wxr_directory.category.admin.controller% ]
         calls:
             - [ setTranslationDomain, [ %wxr_directory.translation_domain% ] ]
         tags:
@@ -38,6 +38,6 @@ services:
                 name: sonata.admin
                 manager_type: orm
                 group: wxr_directory
-                label: groups
+                label: categories
                 label_catalogue: %wxr_directory.translation_domain%
                 label_translator_strategy: sonata.admin.label.strategy.underscore

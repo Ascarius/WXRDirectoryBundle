@@ -38,7 +38,7 @@ class ContactAdmin extends Admin
                     'required' => false
                 ))
             ->end()
-            ->with('form.group_groups')
+            ->with('form.group_categories')
             ->end()
             ->with('form.group_options')
                 ->add('enabled', null, array(
@@ -63,7 +63,7 @@ class ContactAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('fullname')
-            ->add('groups')
+            ->add('categories')
             ->add('address')
         ;
     }

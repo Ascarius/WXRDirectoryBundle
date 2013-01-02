@@ -13,9 +13,9 @@ class ContactAdmin extends BaseContactAdmin
         parent::configureFormFields($formMapper);
 
         $formMapper
-            ->with('form.group_groups')
-                ->add('groups', 'sonata_type_model', array(
-                    'class' => 'Application\\WXR\\DirectoryBundle\\Entity\\Group',
+            ->with('form.group_categories')
+                ->add('categories', 'sonata_type_model', array(
+                    'class' => 'Application\\WXR\\DirectoryBundle\\Entity\\Category',
                     'multiple' => true,
                     'expanded' => true,
                     'required' => false

@@ -1,6 +1,6 @@
 wxr_directory: Annuaire
 contacts: Contacts
-groups: Groupes
+categories: Catégories
 
 breadcrumb:
 
@@ -10,20 +10,20 @@ breadcrumb:
     link_contact_edit: Editer
     link_contact_delete: Supprimer
 
-    # Group
-    link_group_list: Groupes de contacts
-    link_group_create: Ajouter
-    link_group_edit: Editer
-    link_group_delete: Supprimer
+    # Category
+    link_category_list: Categories de contacts
+    link_category_create: Ajouter
+    link_category_edit: Editer
+    link_category_delete: Supprimer
 
 list:
 
     # Contact
     label_fullname: Nom complet
-    label_groups: Groupes
+    label_categories: Catégories
     label_address: Adresse
 
-    # Group
+    # Category
     label_name: Nom
 
 filter:
@@ -37,7 +37,7 @@ form:
 
     group_general: Général
     group_particulars: Coordonnées
-    group_groups: Groupes
+    group_categories: Catégories
     group_options: Options
 
     # Contact
@@ -49,9 +49,9 @@ form:
     label_mobile: Mobile
     label_email: E-mail
     label_website: Site web
-    label_groups: Groupes
+    label_categories: Catégories
     label_enabled: Activé
     label_position: Position
 
-    # Group
+    # Category
     label_name: Nom

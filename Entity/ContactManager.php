@@ -24,7 +24,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
     {
         return array(
             $this->alias.'.fullname',
-            'group.name'
+            'category.name'
         );
     }
 
@@ -37,7 +37,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
 
         $needJoins = false;
 
-        foreach (array('_search', 'group') as $needle) {
+        foreach (array('_search', 'category') as $needle) {
             foreach ($criteria as $criterium => $value) {
                 if (false !== strpos($criterium, $needle)) {
                     $needJoins = true;
@@ -48,7 +48,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
 
         if ($needJoins) {
             $qb
-                ->leftJoin($this->alias.'.groups', 'group')
+                ->leftJoin($this->alias.'.categories', 'category')
             ;
         }
     }
