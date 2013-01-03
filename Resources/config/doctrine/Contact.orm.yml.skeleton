@@ -21,10 +21,10 @@ Application\WXR\DirectoryBundle\Entity\Contact:
             targetEntity: Application\WXR\DirectoryBundle\Entity\Category
             orderBy: { position: ASC, name: ASC }
             joinTable:
-                name: wxr_directory_contact_has_categories
+                name: wxr_directory_contact_has_category
                 joinColumns:
                     contact_id:
                         referencedColumnName: id
                 inverseJoinColumns:
-                    group_id:
+                    category_id:
                         referencedColumnName: id
