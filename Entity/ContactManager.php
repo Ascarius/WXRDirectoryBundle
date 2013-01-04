@@ -20,6 +20,24 @@ class ContactManager extends BaseManager implements ContactManagerInterface
     /**
      * {@inheritDoc}
      */
+    public function findLastUpdated()
+    {
+        $contact = $this->findBy(
+            array(),
+            array('updatedAt' => 'DESC'),
+            1
+        );
+
+        if ($contact) {
+            return current($contact);
+        }
+
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getSearchableProperties()
     {
         return array(
@@ -70,10 +88,9 @@ class ContactManager extends BaseManager implements ContactManagerInterface
      */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
-        $default = array('position' => 'ASC', 'fullname' => 'ASC');
-
-        $orderBy = $orderBy ?
-            array_merge($default, $orderBy) : $default;
+        if (!$orderBy) {
+            $orderBy = array('position' => 'ASC', 'fullname' => 'ASC');
+        }
 
         return parent::buildOrderClause($qb, $orderBy);
     }

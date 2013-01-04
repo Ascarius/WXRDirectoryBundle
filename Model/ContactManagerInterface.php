@@ -13,4 +13,11 @@ interface ContactManagerInterface extends BaseManagerInterface
      * @return ContactInterface|null
      */
     public function findOneBySlug($slug);
+
+    /**
+     * Find last updated
+     *
+     * @return ContactInterface|null
+     */
+    public function findLastUpdated();
 }
