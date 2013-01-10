@@ -14,7 +14,10 @@ class ContactManager extends BaseManager implements ContactManagerInterface
      */
     public function findOneBySlug($slug)
     {
-        return $this->findOneBy(array('slug' => $slug));
+        return $this->findOneBy(array(
+            'slug' => $slug,
+            'required' => true
+        ));
     }
 
     /**
@@ -69,18 +72,6 @@ class ContactManager extends BaseManager implements ContactManagerInterface
                 ->leftJoin($this->alias.'.categories', 'category')
             ;
         }
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function buildWhereClause(QueryBuilder $qb, array $criteria)
-    {
-        if (!array_key_exists('enabled', $criteria)) {
-            $criteria['enabled'] = true;
-        }
-
-        return parent::buildWhereClause($qb, $criteria);
     }
 
     /**
