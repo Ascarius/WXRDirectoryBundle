@@ -16,7 +16,7 @@ class ContactManager extends BaseManager implements ContactManagerInterface
     {
         return $this->findOneBy(array(
             'slug' => $slug,
-            'required' => true
+            'enabled' => true
         ));
     }
 
